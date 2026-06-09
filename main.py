@@ -71,3 +71,48 @@ career_dict = {
     "INTP": ["💻 개발자", "🧪 과학자", "📐 엔지니어"],
     "ENTJ": ["👔 CEO", "📈 경영 컨설턴트", "🚀 사업가"],
     "ENTP": ["💡 창업가", "📢 광고기획자", "🎤 마케터"],
+    "INFJ": ["📚 작가", "🌿 심리학자", "🧑‍🏫 상담사"],
+    "INFP": ["🎨 디자이너", "🎶 음악가", "📖 소설가"],
+    "ENFJ": ["👩‍🏫 교사", "🤝 리더", "🎙️ 강연가"],
+    "ENFP": ["🎬 크리에이터", "📱 유튜버", "🎭 배우"],
+    "ISTJ": ["📋 공무원", "💰 회계사", "🏢 관리자"],
+    "ISFJ": ["🏥 간호사", "💖 사회복지사", "👩‍🏫 교사"],
+    "ESTJ": ["📊 관리자", "⚖️ 판사", "🏛️ 공공기관 리더"],
+    "ESFJ": ["🎉 이벤트 플래너", "🧑‍💼 인사담당자", "🤝 코디네이터"],
+    "ISTP": ["🔧 엔지니어", "🚗 정비사", "🛠️ 기술전문가"],
+    "ISFP": ["📸 사진작가", "🎨 화가", "🎼 작곡가"],
+    "ESTP": ["🏎️ 스포츠선수", "🚓 경찰", "💼 영업전문가"],
+    "ESFP": ["🎤 가수", "💃 댄서", "🎬 배우"]
+}
+
+# ✨ 버튼
+if st.button("💖 직업 추천 받기 ✨"):
+
+    st.balloons()
+
+    st.markdown(
+        f"""
+        <h2 style='text-align:center; color:#6a5acd;'>
+        🎉 {mbti} 추천 직업 🎉
+        </h2>
+        """,
+        unsafe_allow_html=True
+    )
+
+    careers = career_dict[mbti]
+
+    for job in careers:
+        st.markdown(
+            f"<div class='card'>{job} 🌟</div>",
+            unsafe_allow_html=True
+        )
+
+    st.success("✅ 당신에게 잘 어울리는 직업이에요 💖")
+
+# 🌈 하단 문구
+st.markdown("""
+<hr>
+<h4 style='text-align:center; color:gray;'>
+🚀 여러분의 꿈을 응원합니다 🌈✨
+</h4>
+""", unsafe_allow_html=True)
